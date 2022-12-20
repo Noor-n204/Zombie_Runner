@@ -24,3 +24,6 @@ Added forest environment. Implemented EnvironmentSpawner.cs script responsible t
 
      
  
+https://user-images.githubusercontent.com/82387551/208715030-64907504-c179-409b-83a7-50be2fec21ef.mp4
+
+
