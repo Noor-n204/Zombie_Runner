@@ -19,7 +19,8 @@ added UIManager.cs script that is used to manage all game menus and UI related j
 Upon starting/launching the game, the very first screen visible to the user will be the main menus screen. It has 1 play button. On clicking the play button the          Gameplay screen gets enabled, where the user will see his character and zombies. The top right cover contains the distance tab, players current distance travelled        will appear there. On the top left corner of the gameplay screen is a pause button. On clicking the pause button, pause screen appears that contains two buttons:        The resume button that takes player back to the gameplay screen and the end button that takes player to the main menu screen and quit the game. (19 hours)
      
      
-     
+# week 6
+Added forest environment. Implemented EnvironmentSpawner.cs script responsible to spawn forest prefabs once the player reaches the midpoint of the current forest prefab. This is made to give players a feel of an infinite environment. The midpoint of the environment is detected through Checkpoint.cs script. A gameobject with a box collider of trigger type has checkpoint script attached with it. Whenever the player gets into the trigger of this collider, it calls the environmentspawner to destroy the previous forest and randomly spawn the new forest out of 3 in front of the current forest.
 
      
  
