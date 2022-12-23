@@ -27,3 +27,7 @@ Added forest environment. Implemented EnvironmentSpawner.cs script responsible t
 https://user-images.githubusercontent.com/82387551/208715030-64907504-c179-409b-83a7-50be2fec21ef.mp4
 
 
+# week 7
+Integrated PlayerController.cs script responsible to move the player in the game. Player always moves forward in the environment at a constant speed (Can change depending upon the distance covered to keep up the difficulty). Player's basic animator controller was added with Idle, run, and death animations. Player controller has an Update function that moves the player. The movement starts when the user clicks the play button. Player can be paused by clicking the pause button and resuming to move again.
+Added player right and left movements on pressing 'A' and 'D' key respectively. We faced a bug were the character would go off the paths if we keep pressing left or right. The bug was in the values
+
