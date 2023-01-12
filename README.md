@@ -20,7 +20,7 @@ Upon starting/launching the game, the very first screen visible to the user will
      
      
 # week 6
-Added forest environment. Implemented EnvironmentSpawner.cs script responsible to spawn forest prefabs once the player reaches the midpoint of the current forest prefab. This is made to give players a feel of an infinite environment. The midpoint of the environment is detected through Checkpoint.cs script. A gameobject with a box collider of trigger type has checkpoint script attached with it. Whenever the player gets into the trigger of this collider, it calls the environmentspawner to destroy the previous forest and randomly spawn the new forest out of 3 in front of the current forest.
+Added forest environment. Implemented EnvironmentSpawner.cs script responsible to spawn forest prefabs once the player reaches the midpoint of the current forest prefab. This is made to give players a feel of an infinite environment. The midpoint of the environment is detected through Checkpoint.cs script. A gameobject with a box collider of trigger type has checkpoint script attached with it. Whenever the player gets into the trigger of this collider, it calls the environmentspawner to destroy the previous forest and randomly spawn the new forest out of 3 in front of the current forest.(9 hours)
 
      
  
@@ -29,5 +29,8 @@ https://user-images.githubusercontent.com/82387551/208715030-64907504-c179-409b-
 
 # week 7
 Integrated PlayerController.cs script responsible to move the player in the game. Player always moves forward in the environment at a constant speed (Can change depending upon the distance covered to keep up the difficulty). Player's basic animator controller was added with Idle, run, and death animations. Player controller has an Update function that moves the player. The movement starts when the user clicks the play button. Player can be paused by clicking the pause button and resuming to move again.
-Added player right and left movements on pressing 'A' and 'D' key respectively. We faced a bug were the character would go off the paths if we keep pressing left or right. The bug was in the values
+Added player right and left movements on pressing 'A' and 'D' key respectively. We faced a bug were the character would go off the paths if we keep pressing left or right. The bug was in the values(10 hours)
+
+# week 8 
+Added ZombiesSpawner.cs and ZombieController.cs. ZombiesSpawner is responsible for spawning zombies randomly in the lanes. Spawner instantiates 2 types of zombies, 1 remains idle while the other walks forward. Both types of zombies can attack the player once he comes in range. Both zombies has their own animators. Their gameobject has a box collider of trigger type attached and a rigidbody and ZombieController to control the AI. The damage and speed of the zombies can be set in the inspector. Also, the type of zombie is to be set in the inspector. Currently, we have 2 types so 0 and 1 index is used. 0 is for the idle zombie while 1 is for walking. The Player's health is also integrated and the game ends when the player dies. (8 hours)
 
