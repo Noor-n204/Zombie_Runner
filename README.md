@@ -35,7 +35,8 @@ Added player right and left movements on pressing 'A' and 'D' key respectively. 
 Added ZombiesSpawner.cs and ZombieController.cs. ZombiesSpawner is responsible for spawning zombies randomly in the lanes. Spawner instantiates 2 types of zombies, 1 remains idle while the other walks forward. Both types of zombies can attack the player once he comes in range. Both zombies has their own animators. Their gameobject has a box collider of trigger type attached and a rigidbody and ZombieController to control the AI. The damage and speed of the zombies can be set in the inspector. Also, the type of zombie is to be set in the inspector. Currently, we have 2 types so 0 and 1 index is used. 0 is for the idle zombie while 1 is for walking. The Player's health is also integrated and the game ends when the player dies. (8 hours)
 
 #week 9
-   we didnt made any progress this week due to busy schedule.
+
+we didnt made any progress this week due to busy schedule.
 
 #week 10
    Added zombies and player textures. fixed a couple of bugs that we faced after the previous changes. such as:
