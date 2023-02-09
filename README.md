@@ -34,3 +34,14 @@ Added player right and left movements on pressing 'A' and 'D' key respectively. 
 # week 8 
 Added ZombiesSpawner.cs and ZombieController.cs. ZombiesSpawner is responsible for spawning zombies randomly in the lanes. Spawner instantiates 2 types of zombies, 1 remains idle while the other walks forward. Both types of zombies can attack the player once he comes in range. Both zombies has their own animators. Their gameobject has a box collider of trigger type attached and a rigidbody and ZombieController to control the AI. The damage and speed of the zombies can be set in the inspector. Also, the type of zombie is to be set in the inspector. Currently, we have 2 types so 0 and 1 index is used. 0 is for the idle zombie while 1 is for walking. The Player's health is also integrated and the game ends when the player dies. (8 hours)
 
+#week 9
+   we didnt made any progress this week due to busy schedule.
+
+#week 10
+   Added zombies and player textures. fixed a couple of bugs that we faced after the previous changes. such as:
+     Zombie movement through the game pause screen is fixed. Zombie keeps on moving behind the pause screen, while the player was stopped before. (7 hours)
+     
+ #week 11
+    Integrated bullets system. Spawning bullets with the desired firerate according to the gun player has. We can set the firerate in Utilities.cs with 2 constant floats named as PistolFireRate, SMGFireRate for pistol, and smg accordingly. The firerate is the the delay between each bullet fired if the user press and holds Up/W key. A bullet prefab is created in Prefabs/Weapons folder, this prefab gets spawned depending upon the input and firerate. The speed of the bullet can be set in the inspector view of the bullet prefab. The prefab hasCollisionEnter fuction that listens to the bullet hit. If a zombie comes in collision with the bullet, it destroys the bullet and play's the kill animation of the zombie. (9 hours)
+
+
