@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject menus, settings, gameplayUI, pauseMenu, gameEnd;
+    private GameObject menus, settings, gameplayUI, pauseMenu;
 
     [SerializeField]
-    private Text bestDistance, distanceText, healthText, gameEndDistanceText;
+    private Text bestDistance, distanceText;
 
     [SerializeField]
     private Slider musicScroller, soundScroller;
@@ -18,12 +18,11 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private AudiosManager audiosManager;
 
-    private float distance;
-
     void Start()
     {
         SetDistanceText("0");
-        SetBestDistanceText(Mathf.RoundToInt(PreferenceHandler.BestDistanceTravelled));
+
+        SetBestDistanceText(PreferenceHandler.BestDistanceTravelled);
 
         musicScroller.value = PreferenceHandler.MusicVolume;
         soundScroller.value = PreferenceHandler.SoundVolume;
@@ -39,30 +38,6 @@ public class UIManager : MonoBehaviour
         bestDistance.text = "BEST: " + distance;
     }
 
-    public void SetHealthText(float health)
-    {
-        healthText.text = "HEALTH: " + health;
-    }
-
-    private void Update()
-    {
-        if (GameManager.Instance.isPlayingGame)
-        {
-            distance += Time.deltaTime;
-            SetDistanceText(""+Mathf.RoundToInt(distance));
-        }
-    }
-
-    public void ShowGameEnd()
-    {
-        if (distance > PreferenceHandler.BestDistanceTravelled)
-        {
-            PreferenceHandler.BestDistanceTravelled = Mathf.RoundToInt(distance);
-            SetBestDistanceText(Mathf.RoundToInt(distance));
-        }
-        gameEndDistanceText.text = "Distance: " + Mathf.RoundToInt(distance);
-        gameEnd.SetActive(true);
-    }
 
     #region Click Events
 
@@ -77,7 +52,6 @@ public class UIManager : MonoBehaviour
 
                     GameManager.Instance.isPlayingGame = true;
                     GameManager.Instance.player.SetFirstWaypoint(GameManager.Instance.waypoint[0]);
-                    GameManager.Instance.zombieSpawner.StartSpawning();
                     break;
                 }
             case "Pause":
@@ -96,7 +70,9 @@ public class UIManager : MonoBehaviour
                 }
             case "End":
                 {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+                    gameplayUI.SetActive(false);
+                    pauseMenu.SetActive(false);
+                    menus.SetActive(true);
                     break;
                 }
             case "Settings":

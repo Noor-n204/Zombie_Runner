@@ -4,8 +4,7 @@ using UnityEngine;
 
 public static class Utilities
 {
-    public const float PistolFireRate = 1;
-    public const float SMGFireRate = 0.1f;
+
 }
 
 public enum AnimationState
