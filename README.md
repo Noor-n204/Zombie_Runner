@@ -49,6 +49,19 @@ https://user-images.githubusercontent.com/104002892/218794725-315c9707-0814-4907
 
      
  # week 11
-    Integrated bullets system. Spawning bullets with the desired firerate according to the gun player has. We can set the firerate in Utilities.cs with 2 constant floats named as PistolFireRate, SMGFireRate for pistol, and smg accordingly. The firerate is the the delay between each bullet fired if the user press and holds Up/W key. A bullet prefab is created in Prefabs/Weapons folder, this prefab gets spawned depending upon the input and firerate. The speed of the bullet can be set in the inspector view of the bullet prefab. The prefab hasCollisionEnter fuction that listens to the bullet hit. If a zombie comes in collision with the bullet, it destroys the bullet and play's the kill animation of the zombie. (9 hours)
+ Integrated bullets system. Spawning bullets with the desired firerate according to the gun player has. 
+ We can set the firerate in Utilities.cs with 2 constant floats named as PistolFireRate, SMGFireRate for pistol, and smg accordingly. 
+ The firerate is the the delay between each bullet fired if the user press and holds Up/W key. 
+ A bullet prefab is created in Prefabs/Weapons folder, this prefab gets spawned depending upon the input and firerate. 
+ The speed of the bullet can be set in the inspector view of the bullet prefab. The prefab hasCollisionEnter fuction that listens to the bullet hit. 
+ If a zombie comes in collision with the bullet, it destroys the bullet and play's the kill animation of the zombie. (9 hours)
+ 
+ # week 12
+ 
+ Implemented WeaponsSpawner.cs, a script that handles the spawning of weapons. It spawns the SpawnedWeaponsHandler.cs, the script responsible for randomly appearing weapons in the scene. 
+ The SpawnedWeaponHandler listens player's collision and then sets the gun (pistol, SMG) in PlayerController accordingly. 
+ Both pistol and SMG bullet counts can be set in Utilities.cs script. The weapons spawn time increases in the form of multiples of the value set in inspector of WeaponsSpawner. Currenlty it spawns in following interval of seconds, (2,4,6,8,10,...) (9 hours)
+ 
+ 
 
 
