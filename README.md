@@ -62,6 +62,12 @@ https://user-images.githubusercontent.com/104002892/218794725-315c9707-0814-4907
  The SpawnedWeaponHandler listens player's collision and then sets the gun (pistol, SMG) in PlayerController accordingly. 
  Both pistol and SMG bullet counts can be set in Utilities.cs script. The weapons spawn time increases in the form of multiples of the value set in inspector of WeaponsSpawner. Currenlty it spawns in following interval of seconds, (2,4,6,8,10,...) (9 hours)
  
+ # week 13
+ 
+ Added bullets, zombie kill, attack, the player hit, death, pick up guns sounds and effects.
+Added skybox in the scene and fog and lighting adjustments.
+Added player's running with gun animation and transition in animator. (7 hours)
+ 
  
 
 
