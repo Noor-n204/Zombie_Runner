@@ -53,8 +53,8 @@ https://user-images.githubusercontent.com/104002892/218794725-315c9707-0814-4907
  We can set the firerate in Utilities.cs with 2 constant floats named as PistolFireRate, SMGFireRate for pistol, and smg accordingly. 
  The firerate is the the delay between each bullet fired if the user press and holds Up/W key. 
  A bullet prefab is created in Prefabs/Weapons folder, this prefab gets spawned depending upon the input and firerate. 
- The speed of the bullet can be set in the inspector view of the bullet prefab. The prefab hasCollisionEnter fuction that listens to the bullet hit. 
- If a zombie comes in collision with the bullet, it destroys the bullet and play's the kill animation of the zombie. (9 hours)
+ The speed of the bullet can be set in the inspector view of the bullet prefab. The prefab has CollisionEnter fuction that listens to the bullet hit. 
+ If a zombie comes in collision with the bullet, it destroys the bullet and plays the kill animation of the zombie. (9 hours)
  
  # week 12
  
@@ -67,7 +67,13 @@ https://user-images.githubusercontent.com/104002892/218794725-315c9707-0814-4907
  Added bullets, zombie kill, attack, the player hit, death, pick up guns sounds and effects.
 Added skybox in the scene and fog and lighting adjustments.
 Added player's running with gun animation and transition in animator. (7 hours)
- 
+
+# week 14
+Added a quit button in the main menu screen that quits the game on clicking.we had some bugs to fix from previous pushes we did(including debugging and investigating), while working on the game during the exams,
+Fixed zombie attacking the player issues, before the zombie's attack animation gets player way later even when the player passes through it. The collider on the zombie is moved further forward to start attacking before.
+The zombie hit-by-bullet issue is fixed. By the solution of the previous issue, now the bullet also hits the zombie way before, as the collider was shifter forward. Fixed this issue by using the other non-trigger collider and using the OnCollisionEnter function instead of OnTriggerEnter.
+The animation transition fixes the previous state getting stuck when the player gets a weapon. Issue was with the animation transition state condition, which has been set to the greater than value, whereas it was required to be set as equal to.
+Fixed the distance counter error, it keeps on counting the distance till the player's death animation gets played, even the player was not moving at all. (10 hours)
  
 
 
