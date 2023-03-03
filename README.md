@@ -31,6 +31,12 @@ https://user-images.githubusercontent.com/82387551/208715030-64907504-c179-409b-
 Integrated PlayerController.cs script responsible to move the player in the game. Player always moves forward in the environment at a constant speed (Can change depending upon the distance covered to keep up the difficulty). Player's basic animator controller was added with Idle, run, and death animations. Player controller has an Update function that moves the player. The movement starts when the user clicks the play button. Player can be paused by clicking the pause button and resuming to move again.
 Added player right and left movements on pressing 'A' and 'D' key respectively. We faced a bug were the character would go off the paths if we keep pressing left or right. The bug was in the values(10 hours)
 
+
+https://user-images.githubusercontent.com/82387551/222795110-fc40c16e-c197-4c7b-87f6-2d5d755a7615.mp4
+
+
+
+
 # week 8 
 Added ZombiesSpawner.cs and ZombieController.cs. ZombiesSpawner is responsible for spawning zombies randomly in the lanes. Spawner instantiates 2 types of zombies, 1 remains idle while the other walks forward. Both types of zombies can attack the player once he comes in range. Both zombies has their own animators. Their gameobject has a box collider of trigger type attached and a rigidbody and ZombieController to control the AI. The damage and speed of the zombies can be set in the inspector. Also, the type of zombie is to be set in the inspector. Currently, we have 2 types so 0 and 1 index is used. 0 is for the idle zombie while 1 is for walking. The Player's health is also integrated and the game ends when the player dies. (8 hours)
 
@@ -75,5 +81,9 @@ The zombie hit-by-bullet issue is fixed. By the solution of the previous issue, 
 The animation transition fixes the previous state getting stuck when the player gets a weapon. Issue was with the animation transition state condition, which has been set to the greater than value, whereas it was required to be set as equal to.
 Fixed the distance counter error, it keeps on counting the distance till the player's death animation gets played, even the player was not moving at all. (10 hours)
  
+
+https://user-images.githubusercontent.com/82387551/222796463-45dcef54-e180-4109-83d4-aef3deafc5e1.mp4
+
+
 
 
